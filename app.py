@@ -2,8 +2,8 @@ import streamlit as st
 import openai
 
 client = openai.OpenAI(
-    api_key="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",
-    base_url="https://api.groq.com/openai/v1"
+    api_key=st.secrets["api_key"],
+    base_url=st.secrets["base_url"]
 )
 
 
@@ -44,4 +44,5 @@ if prompt:
     
     airesponse = response.output_text
     st.chat_message('assistant').markdown(airesponse)
+
     st.session_state.messages.append({"role": "assistant", "content": airesponse})
