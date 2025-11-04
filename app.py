@@ -13,7 +13,7 @@ st.markdown(
         .stApp {{
             background-image: url("https://ontracai.com/wp-content/uploads/2024/03/ONTRAC-Logo-Light.png");
             background-size: 30% 10%;
-            background-position: 45% 10%;
+            background-position: 50% 10%;
             background-repeat: no-repeat;
             background-attachment: fixed;
         }}
@@ -46,3 +46,4 @@ if prompt:
     st.chat_message('assistant').markdown(airesponse)
 
     st.session_state.messages.append({"role": "assistant", "content": airesponse})
+
