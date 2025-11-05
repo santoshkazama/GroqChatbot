@@ -54,7 +54,6 @@ for message in st.session_state.messages:
     st.chat_message(message['role']).markdown(message['content'])
 
 st.markdown('</div>', unsafe_allow_html=True)
-st.markdown('</div>', unsafe_allow_html=True)
 
 prompt = st.chat_input("Pass your prompt here")
 
@@ -70,5 +69,6 @@ if prompt:
     airesponse = response.output_text
     st.chat_message('assistant').markdown(airesponse)
     st.session_state.messages.append({"role": "assistant", "content": airesponse})
+
 
 
